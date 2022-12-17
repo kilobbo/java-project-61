@@ -1,9 +1,6 @@
-// как экспрешн перевести в экспрешн + перевод чар в инт
-
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Arrays;
 
 public class GCD {
     public static void gameGCD() {
@@ -27,7 +24,7 @@ public class GCD {
         return questionsAndAnswers;
     }
 
-    public static String[] greatestCommonDivisor() {
+    private static String[] greatestCommonDivisor() {
         int firstNumber = GCD.getRandomNumber();
         int secondNumber = GCD.getRandomNumber();
         int lessNumber = GCD.lessNumber(firstNumber, secondNumber);
@@ -44,15 +41,10 @@ public class GCD {
     }
 
     private static int lessNumber (int firstNumber, int secondNumber) {
-        if (firstNumber < secondNumber) {
-            return firstNumber;
-        } else {
-            return secondNumber;
-        }
+        return Math.min(firstNumber, secondNumber);
     }
 
     private static int getRandomNumber() {
-        var randomNumber = (int) Math.floor(Math.random()*100);
-        return randomNumber;
+        return (int) Math.floor(Math.random()*100);
     }
 }

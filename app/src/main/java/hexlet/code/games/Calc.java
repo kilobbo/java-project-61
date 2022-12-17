@@ -1,5 +1,3 @@
-// как экспрешн перевести в экспрешн + перевод чар в инт
-
 package hexlet.code.games;
 
 import hexlet.code.Engine;
@@ -49,8 +47,7 @@ public class Calc {
     }
 
     private static int getRandomNumber() {
-        var randomNumber = (int) Math.floor(Math.random()*100);
-        return randomNumber;
+        return (int) Math.floor(Math.random()*100);
     }
 
     private static char getRandomOperator() {
@@ -59,31 +56,3 @@ public class Calc {
         return operatorsArray[randomNumber];
     }
 }
-
-
-//    private static boolean isRight(int number) {
-//        return Calc.calculate() == number;
-//    }
-//
-//    private static String rightAnswer(int number) {
-//        if (Calc.isRight(number) == true) {
-//            return "yes";
-//        }
-//        return "no";
-//    }
-//    private static char[] getExpression() {
-//        char[] expression = new char[3];
-//        expression[0] = (char) Calc.getRandomNumber();
-//        expression[1] = Calc.getRandomOperator();
-//        expression[2] = (char) Calc.getRandomNumber();
-//        return expression;
-//    }
-//
-//    public static String stringExpression() {
-//        var expressionArray = Calc.generateExpression();
-//        var expression = new StringBuilder();
-//        for (var i = 0; i < expressionArray.length; i++) {
-//            expression.append(expressionArray[i]);
-//            expression.append(" ");
-//        }
-//    }

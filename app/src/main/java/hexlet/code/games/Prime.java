@@ -35,7 +35,7 @@ public class Prime {
     }
 
     private static String rightAnswer(int number) {
-        if (Prime.isPrime(number) == true) {
+        if (Prime.isPrime(number)) {
             return "yes";
         }
         return "no";

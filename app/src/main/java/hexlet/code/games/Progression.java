@@ -25,7 +25,7 @@ public class Progression {
         return questionsAndAnswers;
     }
 
-    public static String[] makeProgression() {
+    private static String[] makeProgression() {
         int firstNumber = Progression.getRandomNumber();
         int increase = Progression.getRandomNumber();
 
@@ -53,14 +53,12 @@ public class Progression {
         }
 
         var stringProgression = Arrays.toString(progression);
-        var removeBracketsInProg = stringProgression.substring(1, stringProgression.length() - 1);
-        stringProgression = removeBracketsInProg;
+        stringProgression = stringProgression.substring(1, stringProgression.length() - 1);
 
         return new String[]{stringProgression, theAnswer};
     }
 
     private static int getRandomNumber() {
-        var randomNumber = (int) Math.floor(Math.random()*100);
-        return randomNumber;
+        return (int) Math.floor(Math.random()*100);
     }
 }

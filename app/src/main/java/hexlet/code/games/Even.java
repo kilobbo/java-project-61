@@ -1,15 +1,9 @@
-// проверь матх.рандом !!!
-
 package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class Even {
     public static void gameEven() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         String[][] questionsAndAnswers = Even.algorithm();
@@ -36,7 +30,7 @@ public class Even {
     }
 
     private static String rightAnswer(int number) {
-        if (Even.isEven(number) == true) {
+        if (Even.isEven(number)) {
             return "yes";
         }
         return "no";
