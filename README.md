@@ -7,3 +7,4 @@ Screenshot_step4: https://yadi.sk/d/Jx0PMxhtun6tDQ
 Screenshot_step5: https://yadi.sk/d/G6CTVRsBb9X2Mw
 Screenshot_step6: https://yadi.sk/d/p-dXABjjB26zjw
 Screenshot_step7: https://yadi.sk/d/n5njE783V5_iAA
+Screenshot_step8: https://yadi.sk/d/orU654a2HC85hg

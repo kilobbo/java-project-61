@@ -41,6 +41,9 @@ public class Engine {
             case "5":
                 Progression.gameProgression();
                 break;
+            case "6":
+                Prime.gamePrime();
+                break;
             default:
                 System.out.println("Man, wtf!");
         }
