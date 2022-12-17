@@ -1,7 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -35,6 +34,9 @@ public class Engine {
                 break;
             case "3":
                 Calc.gameCalc();
+                break;
+            case "4":
+                GCD.gameGCD();
                 break;
             default:
                 System.out.println("Man, wtf!");
