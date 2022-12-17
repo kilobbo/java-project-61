@@ -38,6 +38,9 @@ public class Engine {
             case "4":
                 GCD.gameGCD();
                 break;
+            case "5":
+                Progression.gameProgression();
+                break;
             default:
                 System.out.println("Man, wtf!");
         }
