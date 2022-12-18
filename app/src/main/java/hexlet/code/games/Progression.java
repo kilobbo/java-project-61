@@ -16,10 +16,10 @@ public class Progression {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < 3; i++) {
-            String[] numbers = Progression.getAnswerAndHideHim();
-            questionsAndAnswers[0][i] = numbers[0];
+            String[] round = Progression.getAnswerAndHideHim();
+            questionsAndAnswers[0][i] = round[0];
 
-            String answer = numbers[1];
+            String answer = round[1];
             questionsAndAnswers[1][i] = answer;
         }
         return questionsAndAnswers;
