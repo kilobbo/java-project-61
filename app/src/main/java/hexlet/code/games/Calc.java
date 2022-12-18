@@ -5,15 +5,15 @@ import hexlet.code.Engine;
 import java.lang.*;
 
 public class Calc {
-    public static void gameCalc() {
-        System.out.println("What is the result of the expression?");
+    public static void runCalc() {
+        String description = "What is the result of the expression?";
 
-        String[][] questionsAndAnswers = Calc.algorithm();
+        String[][] questionsAndAnswers = Calc.generateRound();
 
-        Engine.game(questionsAndAnswers);
+        Engine.game(questionsAndAnswers, description);
     }
 
-    private static String[][] algorithm() {
+    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < 3; i++) {
@@ -31,10 +31,10 @@ public class Calc {
         int secondNumber = Calc.getRandomNumber();
         char operator = getRandomOperator();
         return new String[]{firstNumber + " " + operator + " " + secondNumber,
-                String.valueOf(calculate(firstNumber, secondNumber, operator))};
+                String.valueOf(generateAnswer(firstNumber, secondNumber, operator))};
     }
 
-    private static int calculate(int firstNumber, int secondNumber, char operator) {
+    private static int generateAnswer(int firstNumber, int secondNumber, char operator) {
         int result = 0;
         if (operator == '+') {
             result = firstNumber + secondNumber;

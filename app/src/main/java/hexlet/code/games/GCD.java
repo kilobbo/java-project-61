@@ -3,15 +3,15 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
-    public static void gameGCD() {
-        System.out.println("Find the greatest common divisor of given numbers.");
+    public static void runGCD() {
+        String description = "Find the greatest common divisor of given numbers.";
 
-        String[][] questionsAndAnswers = GCD.algorithm();
+        String[][] questionsAndAnswers = GCD.generateRound();
 
-        Engine.game(questionsAndAnswers);
+        Engine.game(questionsAndAnswers, description);
     }
 
-    private static String[][] algorithm() {
+    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < 3; i++) {
@@ -27,15 +27,15 @@ public class GCD {
     private static String[] greatestCommonDivisor() {
         int firstNumber = GCD.getRandomNumber();
         int secondNumber = GCD.getRandomNumber();
-        int lessNumber = GCD.lessNumber(firstNumber, secondNumber);
-        while (lessNumber > 0) {
-            if (firstNumber % lessNumber == 0 && secondNumber % lessNumber == 0) {
+        int possibleDivisor = GCD.lessNumber(firstNumber, secondNumber);
+        while (possibleDivisor > 0) {
+            if (firstNumber % possibleDivisor == 0 && secondNumber % possibleDivisor == 0) {
                 break;
             } else {
-                lessNumber -= 1;
+                possibleDivisor -= 1;
             }
         }
-        int GCD = lessNumber;
+        int GCD = possibleDivisor;
 
         return new String[]{firstNumber + " " + secondNumber, Integer.toString(GCD)};
     }

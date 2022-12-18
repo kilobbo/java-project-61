@@ -4,15 +4,15 @@ import hexlet.code.Engine;
 import java.util.Arrays;
 
 public class Progression {
-    public static void gameProgression() {
-        System.out.println("What number is missing in the progression?");
+    public static void runProgression() {
+        String description = "What number is missing in the progression?";
 
-        String[][] questionsAndAnswers = Progression.algorithm();
+        String[][] questionsAndAnswers = Progression.generateRound();
 
-        Engine.game(questionsAndAnswers);
+        Engine.game(questionsAndAnswers, description);
     }
 
-    private static String[][] algorithm() {
+    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < 3; i++) {
@@ -25,7 +25,7 @@ public class Progression {
         return questionsAndAnswers;
     }
 
-    private static String[] makeProgression() {
+    private static String[] generateProgression() {
         int firstNumber = Progression.getRandomNumber();
         int increase = Progression.getRandomNumber();
 
@@ -39,11 +39,11 @@ public class Progression {
         return progression;
     }
 
-    private static String[] getAnswerAndHideHim () {
+    private static String[] getAnswerAndHideHim() {
         var randomNumber = (int) Math.floor(Math.random() * 10);
 
-        var progression = Progression.makeProgression();
-        var theAnswer = progression[randomNumber];
+        String[] progression = Progression.generateProgression();
+        String theAnswer = progression[randomNumber];
 
         for (var i = 0; i < progression.length; i++) {
             if (theAnswer.equals(progression[i])) {
@@ -52,7 +52,7 @@ public class Progression {
             }
         }
 
-        var stringProgression = Arrays.toString(progression);
+        String stringProgression = Arrays.toString(progression);
         stringProgression = stringProgression.substring(1, stringProgression.length() - 1);
 
         return new String[]{stringProgression, theAnswer};

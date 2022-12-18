@@ -3,20 +3,20 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static void gamePrime() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+    public static void runPrime() {
+        String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        String[][] questionsAndAnswers = Prime.algorithm();
+        String[][] questionsAndAnswers = Prime.generateRound();
 
-        Engine.game(questionsAndAnswers);
+        Engine.game(questionsAndAnswers, description);
     }
 
-    private static String[][] algorithm() {
+    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < 3; i++) {
             int number = (int) Math.floor(Math.random()*100);
-            var question = Integer.toString(number);
+            String question = Integer.toString(number);
             questionsAndAnswers[0][i] = question;
 
             String answer = Prime.rightAnswer(number);

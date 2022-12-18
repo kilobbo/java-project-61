@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.games.*;
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
         String menu = "Please enter the game number and press Enter.\n" +
@@ -13,6 +16,38 @@ public class App {
                 "Your choice: ";
         System.out.println(menu);
 
-        Engine.engine();
+        Scanner scanner = new Scanner(System.in);
+        String choice = scanner.next();
+        App.choice(choice);
+
+        scanner.close();
+    }
+
+    private static void choice(String choice){
+        switch (choice) {
+            case "1":
+                Cli.player();
+                break;
+            case "2":
+                Even.runEven();
+                break;
+            case "3":
+                Calc.runCalc();
+                break;
+            case "4":
+                GCD.runGCD();
+                break;
+            case "5":
+                Progression.runProgression();
+                break;
+            case "6":
+                Prime.runPrime();
+                break;
+            case "0":
+                break;
+            default:
+                System.out.println("No such option.");
+                break;
+        }
     }
 }
