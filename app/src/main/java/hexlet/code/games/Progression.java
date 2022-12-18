@@ -52,10 +52,15 @@ public class Progression {
             }
         }
 
-        String stringProgression = Arrays.toString(progression);
-        stringProgression = stringProgression.substring(1, stringProgression.length() - 1);
+        String stringProgression = Progression.removeCommasAndBracketsAndTurnToString(progression);
 
         return new String[]{stringProgression, theAnswer};
+    }
+
+    private static String removeCommasAndBracketsAndTurnToString(String[] progression) {
+        String stringProgression = Arrays.toString(progression);
+        stringProgression = stringProgression.substring(1, stringProgression.length() - 1).replace(",", "");
+        return stringProgression;
     }
 
     private static int getRandomNumber() {
