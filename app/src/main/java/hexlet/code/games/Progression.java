@@ -25,9 +25,9 @@ public class Progression {
     private static String[] generateProgression() {
         int firstNumber = Util.getRandomNumber();
         int increase = Util.getRandomNumber();
-        int numberOfDigitsInLine = 10;
+        final int DIGITSINLINE = 10;
 
-        String[] progression = new String[numberOfDigitsInLine];
+        String[] progression = new String[DIGITSINLINE];
         progression[0] = Integer.toString(firstNumber);
 
         for (var i = 1; i < progression.length; i++) {
@@ -38,7 +38,7 @@ public class Progression {
     }
 
     private static String[] getAnswerAndHideHim() {
-        int numberOfDigitsInLine = 10;
+        final int numberOfDigitsInLine = 10;
         var randomNumber = (int) Math.floor(Math.random() * numberOfDigitsInLine);
 
         String[] progression = Progression.generateProgression();
