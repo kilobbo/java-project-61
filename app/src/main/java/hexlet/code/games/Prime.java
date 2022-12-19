@@ -7,12 +7,6 @@ public class Prime {
     public static void runPrime() {
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        String[][] questionsAndAnswers = Prime.generateRound();
-
-        Engine.game(questionsAndAnswers, description);
-    }
-
-    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
@@ -23,7 +17,8 @@ public class Prime {
             String answer = Prime.rightAnswer(number);
             questionsAndAnswers[1][i] = answer;
         }
-        return questionsAndAnswers;
+
+        Engine.game(questionsAndAnswers, description);
     }
 
     private static boolean isPrime(int number) {

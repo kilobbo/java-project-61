@@ -7,12 +7,6 @@ public class Even {
     public static void runEven() {
         String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        String[][] questionsAndAnswers = Even.generateRound();
-
-        Engine.game(questionsAndAnswers, description);
-    }
-
-    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
@@ -23,7 +17,8 @@ public class Even {
             String answer = Even.rightAnswer(number);
             questionsAndAnswers[1][i] = answer;
         }
-        return questionsAndAnswers;
+
+        Engine.game(questionsAndAnswers, description);
     }
 
     private static boolean isEven(int number) {

@@ -7,12 +7,6 @@ public class GCD {
     public static void runGCD() {
         String description = "Find the greatest common divisor of given numbers.";
 
-        String[][] questionsAndAnswers = GCD.generateRound();
-
-        Engine.game(questionsAndAnswers, description);
-    }
-
-    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
@@ -22,7 +16,8 @@ public class GCD {
             String answer = numbers[1];
             questionsAndAnswers[1][i] = answer;
         }
-        return questionsAndAnswers;
+
+        Engine.game(questionsAndAnswers, description);
     }
 
     private static String[] greatestCommonDivisor() {

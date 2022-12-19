@@ -7,12 +7,6 @@ public class Calc {
     public static void runCalc() {
         String description = "What is the result of the expression?";
 
-        String[][] questionsAndAnswers = Calc.generateRound();
-
-        Engine.game(questionsAndAnswers, description);
-    }
-
-    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
@@ -22,7 +16,8 @@ public class Calc {
             String answer = expression[1];
             questionsAndAnswers[1][i] = answer;
         }
-        return questionsAndAnswers;
+
+        Engine.game(questionsAndAnswers, description);
     }
 
     private static String[] generateExpression() {

@@ -9,12 +9,6 @@ public class Progression {
     public static void runProgression() {
         String description = "What number is missing in the progression?";
 
-        String[][] questionsAndAnswers = Progression.generateRound();
-
-        Engine.game(questionsAndAnswers, description);
-    }
-
-    private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
@@ -24,7 +18,8 @@ public class Progression {
             String answer = round[1];
             questionsAndAnswers[1][i] = answer;
         }
-        return questionsAndAnswers;
+
+        Engine.game(questionsAndAnswers, description);
     }
 
     private static String[] generateProgression() {
