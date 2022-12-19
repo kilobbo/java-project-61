@@ -25,9 +25,9 @@ public class Progression {
     private static String[] generateProgression() {
         int firstNumber = Util.getRandomNumber();
         int increase = Util.getRandomNumber();
-        final int DIGITSINLINE = 10;
+        final int digitsInLine = 10;
 
-        String[] progression = new String[DIGITSINLINE];
+        String[] progression = new String[digitsInLine];
         progression[0] = Integer.toString(firstNumber);
 
         for (var i = 1; i < progression.length; i++) {
