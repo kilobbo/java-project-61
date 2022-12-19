@@ -15,7 +15,7 @@ public class Engine {
 
         System.out.println(description);
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             System.out.println("Question: " + questionsAndAnswers[0][i]);
             System.out.println("Your answer: ");
 

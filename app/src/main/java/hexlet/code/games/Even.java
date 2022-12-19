@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Util;
 
 public class Even {
     public static void runEven() {
@@ -14,8 +15,8 @@ public class Even {
     private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
-        for (var i = 0; i < 3; i++) {
-            int number = (int) Math.floor(Math.random() * 100);
+        for (var i = 0; i < Util.getNumberOfRounds(); i++) {
+            int number = Util.getRandomNumber();
             String question = Integer.toString(number);
             questionsAndAnswers[0][i] = question;
 

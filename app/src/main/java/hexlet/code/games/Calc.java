@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Util;
 
 public class Calc {
     public static void runCalc() {
@@ -14,7 +15,7 @@ public class Calc {
     private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             String[] expression = Calc.generateExpression();
             questionsAndAnswers[0][i] = expression[0];
 
@@ -25,8 +26,8 @@ public class Calc {
     }
 
     private static String[] generateExpression() {
-        int firstNumber = Calc.getRandomNumber();
-        int secondNumber = Calc.getRandomNumber();
+        int firstNumber = Util.getRandomNumber();
+        int secondNumber = Util.getRandomNumber();
         char operator = getRandomOperator();
         return new String[]{firstNumber + " " + operator + " " + secondNumber,
                 String.valueOf(generateAnswer(firstNumber, secondNumber, operator))};
@@ -42,10 +43,6 @@ public class Calc {
             result = firstNumber * secondNumber;
         }
         return result;
-    }
-
-    private static int getRandomNumber() {
-        return (int) Math.floor(Math.random() * 100);
     }
 
     private static char getRandomOperator() {

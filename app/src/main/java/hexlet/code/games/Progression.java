@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Util;
+
 import java.util.Arrays;
 
 public class Progression {
@@ -15,7 +17,7 @@ public class Progression {
     private static String[][] generateRound() {
         String[][] questionsAndAnswers = new String[3][3];
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             String[] round = Progression.getAnswerAndHideHim();
             questionsAndAnswers[0][i] = round[0];
 
@@ -26,8 +28,8 @@ public class Progression {
     }
 
     private static String[] generateProgression() {
-        int firstNumber = Progression.getRandomNumber();
-        int increase = Progression.getRandomNumber();
+        int firstNumber = Util.getRandomNumber();
+        int increase = Util.getRandomNumber();
 
         String[] progression = new String[10];
         progression[0] = Integer.toString(firstNumber);
@@ -61,9 +63,5 @@ public class Progression {
         String stringProgression = Arrays.toString(progression);
         stringProgression = stringProgression.substring(1, stringProgression.length() - 1).replace(",", "");
         return stringProgression;
-    }
-
-    private static int getRandomNumber() {
-        return (int) Math.floor(Math.random() * 100);
     }
 }
