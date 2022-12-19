@@ -9,7 +9,7 @@ public class Progression {
     public static void runProgression() {
         String description = "What number is missing in the progression?";
 
-        String[][] questionsAndAnswers = new String[3][3];
+        String[][] questionsAndAnswers = new String[Util.getNumberOfRounds()][Util.getNumberOfRounds()];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             String[] round = Progression.getAnswerAndHideHim();

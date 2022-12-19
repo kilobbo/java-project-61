@@ -7,7 +7,7 @@ public class GCD {
     public static void runGCD() {
         String description = "Find the greatest common divisor of given numbers.";
 
-        String[][] questionsAndAnswers = new String[3][3];
+        String[][] questionsAndAnswers = new String[Util.getNumberOfRounds()][Util.getNumberOfRounds()];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             String[] numbers = GCD.greatestCommonDivisor();

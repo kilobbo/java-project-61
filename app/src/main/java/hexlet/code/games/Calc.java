@@ -7,7 +7,7 @@ public class Calc {
     public static void runCalc() {
         String description = "What is the result of the expression?";
 
-        String[][] questionsAndAnswers = new String[3][3];
+        String[][] questionsAndAnswers = new String[Util.getNumberOfRounds()][Util.getNumberOfRounds()];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             String[] expression = Calc.generateExpression();

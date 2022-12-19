@@ -7,7 +7,7 @@ public class Even {
     public static void runEven() {
         String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        String[][] questionsAndAnswers = new String[3][3];
+        String[][] questionsAndAnswers = new String[Util.getNumberOfRounds()][Util.getNumberOfRounds()];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             int number = Util.getRandomNumber();

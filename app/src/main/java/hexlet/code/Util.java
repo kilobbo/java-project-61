@@ -2,17 +2,17 @@ package hexlet.code;
 
 public class Util {
     public static int getRandomNumber() {
-        final int MAXNUMBER = 100;
-        final int MINNUMBER = 2;
-        int randomNumber = (int) Math.floor(Math.random() * MAXNUMBER);
+        final int maxNumber = 100;
+        final int minNumber = 2;
+        int randomNumber = (int) Math.floor(Math.random() * maxNumber);
         if (randomNumber == 0) {
-            randomNumber += MINNUMBER;
+            randomNumber += minNumber;
         }
         return randomNumber;
     }
 
     public static int getNumberOfRounds() {
-        final int NUMBEROFROUNDS = 3;
-        return NUMBEROFROUNDS;
+        final int numberOfPounds = 3;
+        return numberOfPounds;
     }
 }

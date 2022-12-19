@@ -7,7 +7,7 @@ public class Prime {
     public static void runPrime() {
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        String[][] questionsAndAnswers = new String[3][3];
+        String[][] questionsAndAnswers = new String[Util.getNumberOfRounds()][Util.getNumberOfRounds()];
 
         for (var i = 0; i < Util.getNumberOfRounds(); i++) {
             int number = Util.getRandomNumber();
