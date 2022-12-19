@@ -30,8 +30,9 @@ public class Progression {
     private static String[] generateProgression() {
         int firstNumber = Util.getRandomNumber();
         int increase = Util.getRandomNumber();
+        int numberOfDigitsInLine = 10;
 
-        String[] progression = new String[10];
+        String[] progression = new String[numberOfDigitsInLine];
         progression[0] = Integer.toString(firstNumber);
 
         for (var i = 1; i < progression.length; i++) {
@@ -42,7 +43,8 @@ public class Progression {
     }
 
     private static String[] getAnswerAndHideHim() {
-        var randomNumber = (int) Math.floor(Math.random() * 10);
+        int numberOfDigitsInLine = 10;
+        var randomNumber = (int) Math.floor(Math.random() * numberOfDigitsInLine);
 
         String[] progression = Progression.generateProgression();
         String theAnswer = progression[randomNumber];

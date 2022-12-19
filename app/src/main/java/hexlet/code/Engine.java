@@ -28,8 +28,8 @@ public class Engine {
                         + userAnswer
                         + "' is wrong answer ;(. Correct answer was '"
                         + questionsAndAnswers[1][i]
-                        + "'.\n" +
-                        "Let's try again, "
+                        + "'.\n"
+                        + "Let's try again, "
                         + userName
                         + "!");
                 return;

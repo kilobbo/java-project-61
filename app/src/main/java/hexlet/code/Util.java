@@ -11,6 +11,7 @@ public class Util {
     }
 
     public static int getNumberOfRounds() {
-        return 3;
+        int numberOfRounds = 3;
+        return numberOfRounds;
     }
 }
