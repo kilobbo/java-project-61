@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.lang.*;
-
 public class Calc {
     public static void runCalc() {
         String description = "What is the result of the expression?";
@@ -47,7 +45,7 @@ public class Calc {
     }
 
     private static int getRandomNumber() {
-        return (int) Math.floor(Math.random()*100);
+        return (int) Math.floor(Math.random() * 100);
     }
 
     private static char getRandomOperator() {

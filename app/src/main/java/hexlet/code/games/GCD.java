@@ -35,16 +35,16 @@ public class GCD {
                 possibleDivisor -= 1;
             }
         }
-        int GCD = possibleDivisor;
+        int gcd = possibleDivisor;
 
-        return new String[]{firstNumber + " " + secondNumber, Integer.toString(GCD)};
+        return new String[]{firstNumber + " " + secondNumber, Integer.toString(gcd)};
     }
 
-    private static int lessNumber (int firstNumber, int secondNumber) {
+    private static int lessNumber(int firstNumber, int secondNumber) {
         return Math.min(firstNumber, secondNumber);
     }
 
     private static int getRandomNumber() {
-        return (int) Math.floor(Math.random()*100);
+        return (int) Math.floor(Math.random() * 100);
     }
 }

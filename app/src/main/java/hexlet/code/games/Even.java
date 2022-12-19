@@ -15,7 +15,7 @@ public class Even {
         String[][] questionsAndAnswers = new String[3][3];
 
         for (var i = 0; i < 3; i++) {
-            int number = (int) Math.floor(Math.random()*100);
+            int number = (int) Math.floor(Math.random() * 100);
             String question = Integer.toString(number);
             questionsAndAnswers[0][i] = question;
 

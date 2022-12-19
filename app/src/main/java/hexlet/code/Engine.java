@@ -1,7 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
-
 import java.util.Scanner;
 
 public class Engine {
@@ -11,7 +9,9 @@ public class Engine {
 
         System.out.print("May I have your name? ");
         String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
+        System.out.println("Hello, "
+                + userName
+                + "!");
 
         System.out.println(description);
 
@@ -29,11 +29,14 @@ public class Engine {
                         + "' is wrong answer ;(. Correct answer was '"
                         + questionsAndAnswers[1][i]
                         + "'.\n" +
-                        "Let's try again, " + userName + "!");
+                        "Let's try again, "
+                        + userName
+                        + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + userName + "!");
+        System.out.println("Congratulations, "
+                + userName
+                + "!");
     }
 }
-

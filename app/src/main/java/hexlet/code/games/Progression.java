@@ -64,6 +64,6 @@ public class Progression {
     }
 
     private static int getRandomNumber() {
-        return (int) Math.floor(Math.random()*100);
+        return (int) Math.floor(Math.random() * 100);
     }
 }
